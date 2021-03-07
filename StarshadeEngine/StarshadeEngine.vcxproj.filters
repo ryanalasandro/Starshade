@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Application">
+      <UniqueIdentifier>{2d697538-c06c-40de-88f4-371e2e906afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application">
+      <UniqueIdentifier>{a758694b-fc7c-46c9-9ff0-ba287d4858fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application\Base">
+      <UniqueIdentifier>{f8d06086-ee09-4616-ad30-a96766d7f9cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application\Base">
+      <UniqueIdentifier>{bc6b8a9e-b34c-4d75-8452-d72cdf02271b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{9aaafe0d-33cc-4059-95cb-c0211fb7aeaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Components">
+      <UniqueIdentifier>{c1711aaf-bf7c-4a3e-ace3-fe845b89944e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factory">
+      <UniqueIdentifier>{c6dcefc5-a7b0-42c5-bf41-af0ed6c62db7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factory">
+      <UniqueIdentifier>{128e2487-54cd-4a11-93b5-75b2b338b111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{9f7362c0-e3ca-44ef-8e6a-2cfa1c94b6e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{3bde3329-e08d-4c5f-a180-00597fb8f574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\Memory">
+      <UniqueIdentifier>{8bcd595f-a256-4366-af42-b614dc3b0244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities\Memory">
+      <UniqueIdentifier>{23de188b-2360-423a-990e-7098870c54a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\Memory\Stack">
+      <UniqueIdentifier>{9b094d0c-191d-4979-b856-9777653cb560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities\Memory\Stack">
+      <UniqueIdentifier>{bfeacc65-144f-4f02-a9f6-83fa7da64d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Globals">
+      <UniqueIdentifier>{fc049c86-6efe-4d66-a0e4-10e9de6857ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application\Platform">
+      <UniqueIdentifier>{ca4c1399-974c-4d83-a6c1-e1995ce36a0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application\Platform">
+      <UniqueIdentifier>{4199b209-540b-4f9d-83bf-727917b81f25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resources">
+      <UniqueIdentifier>{b75f698e-e041-4ef0-ac7d-fac2c497ff1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resources">
+      <UniqueIdentifier>{33dcfff1-bc29-46ad-b7b8-2c255b034ec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application\Panels">
+      <UniqueIdentifier>{9a2ba51c-379a-4503-961e-2d7c7b20905e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application\Panels">
+      <UniqueIdentifier>{28983539-fe48-4e49-a3fe-3bf5c9344924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application\Panels\Windows">
+      <UniqueIdentifier>{19d85b39-626e-48cc-9bd7-d65d720f6448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application\Platform\Windows">
+      <UniqueIdentifier>{fc301acf-9818-4a97-b261-9fcbca26a37c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application\Panels\Windows">
+      <UniqueIdentifier>{68cefdc5-b084-4d0e-97f5-2eb263d9c20f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application\Platform\Windows">
+      <UniqueIdentifier>{90595e02-f775-4c75-8353-2044b410a4b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{7d4875e8-d2b1-476a-b573-8fec28d2f201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\Float">
+      <UniqueIdentifier>{8a44ea44-3d68-4ead-9ea3-8b57327b970f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\SIMD">
+      <UniqueIdentifier>{e5226f46-c419-4e96-b928-0308162545a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\Vector">
+      <UniqueIdentifier>{15b9f897-42c9-49dd-9481-2125224b8c43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\Bounding Volumes">
+      <UniqueIdentifier>{baee8ba3-7c91-4df9-8325-e08aa81781d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{43ed4666-7949-4277-8628-7feda74bb502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\Debug">
+      <UniqueIdentifier>{75d42a34-0612-4102-ac15-e3e877279e77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application\Platform\Data">
+      <UniqueIdentifier>{62807b35-8d9f-4f6b-a9f3-d54b7fae3b2d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\CAppBase.h">
+      <Filter>Header Files\Application\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\CObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\CMemory.h">
+      <Filter>Header Files\Utilities\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\CMemDblStack.h">
+      <Filter>Header Files\Utilities\Memory\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\CComponent.h">
+      <Filter>Header Files\Objects\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals\CGlobals.h">
+      <Filter>Header Files\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals\CDefines.h">
+      <Filter>Header Files\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\CEngineFactory.h">
+      <Filter>Header Files\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPlatform.h">
+      <Filter>Header Files\Application\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\CResourceManager.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPanel.h">
+      <Filter>Header Files\Application\Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPanelWin.h">
+      <Filter>Header Files\Application\Panels\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPlatformWin.h">
+      <Filter>Header Files\Application\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathFloat.h">
+      <Filter>Header Files\Math\Float</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CSIMDVector.h">
+      <Filter>Header Files\Math\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CSIMDMath.h">
+      <Filter>Header Files\Math\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathVector2.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathVector3.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathVector4.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathRect.h">
+      <Filter>Header Files\Math\Bounding Volumes</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\CMemoryUtil.h">
+      <Filter>Header Files\Utilities\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\CEngineError.h">
+      <Filter>Header Files\Utilities\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\CDebugLog.h">
+      <Filter>Header Files\Utilities\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPlatformData.h">
+      <Filter>Header Files\Application\Platform\Data</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\CAppBase.cpp">
+      <Filter>Source Files\Application\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\CMemory.cpp">
+      <Filter>Source Files\Utilities\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\CMemDblStack.cpp">
+      <Filter>Source Files\Utilities\Memory\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\CEngineFactory.cpp">
+      <Filter>Source Files\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\CPlatform.cpp">
+      <Filter>Source Files\Application\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources\CResourceManager.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\CPanel.cpp">
+      <Filter>Source Files\Application\Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\CPanelWin.cpp">
+      <Filter>Source Files\Application\Panels\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\CPlatformWin.cpp">
+      <Filter>Source Files\Application\Platform\Windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
