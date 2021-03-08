@@ -1,2 +1,2 @@
 # Starshade
-Starshade is a 3d graphics engine with a focus on worlds and stories.
+Starshade is a simple 3d graphics engine that will have a focus on worlds and stories.
