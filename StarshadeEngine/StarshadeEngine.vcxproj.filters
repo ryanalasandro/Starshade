@@ -112,6 +112,42 @@
     <Filter Include="Header Files\Application\Platform\Data">
       <UniqueIdentifier>{62807b35-8d9f-4f6b-a9f3-d54b7fae3b2d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Application\Panels\Data">
+      <UniqueIdentifier>{99a28059-8f06-4bc8-9e5e-eefb7ad53153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{76792611-7bd6-485c-8eae-f6ef2c4952cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{5237139b-e02a-4484-8e5a-d4d929b418e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\API">
+      <UniqueIdentifier>{70b92380-9de6-420a-8c85-612358066c30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\API">
+      <UniqueIdentifier>{4d740dc2-b846-4b7f-ad99-7fe5f4c27b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\API\DX12">
+      <UniqueIdentifier>{cd03fce0-c907-41ef-addc-451c1d12ce31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\API\DX12">
+      <UniqueIdentifier>{f6b83dd8-d672-47b6-a449-9a16a5470aef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Data">
+      <UniqueIdentifier>{da03bf8e-5d6b-4de4-b574-5f7604f8111d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\Memory\Utilities">
+      <UniqueIdentifier>{19314c34-66d8-4040-9635-30563b628643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{9ea26367-ba8a-4df0-a8a3-b689589e132a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math\Vectors">
+      <UniqueIdentifier>{ab9d36ef-2333-4136-bb0c-5b792a785265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\API\DX12\Utilities">
+      <UniqueIdentifier>{0bbf2cca-1134-4e4b-b900-a7ecb7ba5c61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\CAppBase.h">
@@ -186,6 +222,45 @@
     <ClInclude Include="Application\CPlatformData.h">
       <Filter>Header Files\Application\Platform\Data</Filter>
     </ClInclude>
+    <ClInclude Include="Math\CMathVectorInt2.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathVectorInt3.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathVectorInt4.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPanelData.h">
+      <Filter>Header Files\Application\Panels\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\CGraphicsAPI.h">
+      <Filter>Header Files\Graphics\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPlatformWin.hpp">
+      <Filter>Source Files\Application\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CPanelWin.hpp">
+      <Filter>Source Files\Application\Panels\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\CDX12Graphics.hpp">
+      <Filter>Source Files\Graphics\API\DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\CGraphicsData.h">
+      <Filter>Header Files\Graphics\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\CMemoryFree.h">
+      <Filter>Header Files\Utilities\Memory\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\CDX12Graphics.h">
+      <Filter>Header Files\Graphics\API\DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathColor.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\CDX12Util.h">
+      <Filter>Header Files\Graphics\API\DX12\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\CAppBase.cpp">
@@ -209,11 +284,11 @@
     <ClCompile Include="Application\CPanel.cpp">
       <Filter>Source Files\Application\Panels</Filter>
     </ClCompile>
-    <ClCompile Include="Application\CPanelWin.cpp">
-      <Filter>Source Files\Application\Panels\Windows</Filter>
+    <ClCompile Include="Graphics\CGraphicsAPI.cpp">
+      <Filter>Source Files\Graphics\API</Filter>
     </ClCompile>
-    <ClCompile Include="Application\CPlatformWin.cpp">
-      <Filter>Source Files\Application\Platform\Windows</Filter>
+    <ClCompile Include="Math\CMathColor.cpp">
+      <Filter>Source Files\Math\Vectors</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

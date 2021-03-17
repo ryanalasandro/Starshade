@@ -3,6 +3,27 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# media files
+*.wav
+*.ogg
+*.[Dd][Dd][Ss]
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mpk
+
+# media folders
+Art/
+Backup/
+Builds/
+Externals/
+Libraries/
+Starshade/
+Resources/
+PIX/
+Tmp/
+
 # User-specific files
 *.rsuser
 *.suo

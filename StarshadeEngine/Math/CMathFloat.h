@@ -42,7 +42,7 @@ namespace Math {
 	//
 
 	inline int Sign(int i) { return -(i < 0) + (i > 0); }
-	inline float Sign(float f) { return -(f < 0.0f) + (f > 0.0f); }
+	inline float Sign(float f) { return -float((f < 0.0f) + (f > 0.0f)); }
 
 	inline int Clamp(int i, int mn, int mx) { return (i < mn) ? mn : ((i > mx) ? mx : i); }
 	inline float Clamp(float f, float mn, float mx) { return (f < mn) ? mn : ((f > mx) ? mx : f); }

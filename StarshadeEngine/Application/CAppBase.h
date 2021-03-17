@@ -13,6 +13,10 @@
 
 #include "../Objects/CObject.h"
 
+namespace Graphics {
+	class CGraphicsAPI;
+};
+
 namespace App {
 	class CAppBase : private IObject {
 	protected:
@@ -34,8 +38,18 @@ namespace App {
 		void Render() override = 0;
 		void Release() override = 0;
 
+		inline class CPanel* Panel() { return m_pPanel; }
+
+	private:
+		void OnMove(const class CPanel* pPanel);
+		void OnResize(const class CPanel* pPanel) final;
+
 	protected:
 		class CPlatform* m_pPlatform;
+		Graphics::CGraphicsAPI* m_pGraphics;
+
+	private:
+		class CPanel* m_pPanel;
 	};
 };
 

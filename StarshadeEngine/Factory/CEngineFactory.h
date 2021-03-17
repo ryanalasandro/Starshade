@@ -16,6 +16,10 @@ namespace App {
 	class CPanel;
 };
 
+namespace Graphics {
+	class CGraphicsAPI;
+};
+
 namespace Factory {
 	class CEngineFactory {
 	public:
@@ -36,9 +40,11 @@ namespace Factory {
 		App::CPanel* CreatePanel(bool bFromStack = true);
 
 		App::CPlatform* GetPlatform(bool bAllowCreation = false, bool bFromStack = true);
+		Graphics::CGraphicsAPI* GetGraphics(bool bAllowCreation = false, bool bFromStack = true);
 
 	private:
 		App::CPlatform* m_pPlatform;
+		Graphics::CGraphicsAPI* m_pGraphics;
 	};
 };
 

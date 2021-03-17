@@ -193,10 +193,11 @@ namespace Math {
 		}
 
 		inline CSIMDVector MoveTowards(const CSIMDVector& to, float t) const {
-			vf32 pt = Sign(_mm_sub_ps(to.m_xmm, m_xmm));
-			pt = _mm_mul_ps(pt, _mm_set_ps1(t));
-			pt = _mm_add_ps(m_xmm, pt);
-			return Clamp(pt, m_xmm, to.m_xmm);
+			const CSIMDVector diff = to - *this;
+			if(diff.LengthSq() < 1e-8f) return to;
+			const CSIMDVector target = *this + diff.Normalized() * t;
+			if(Dot(diff, to - target) <= 0.0f) return to;
+			return target;
 		}
 
 	private:

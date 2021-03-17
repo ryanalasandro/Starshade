@@ -4,11 +4,11 @@
 //
 // Static Library: Starshade Engine
 //
-// File: Application/CPlatformWin.cpp
+// File: Application/CPlatformWin.hpp
 //
 //-------------------------------------------------------------------------------------------------
 
-#include "CPlatformWin.h"
+//#include "CPlatformWin.h"
 
 namespace App {
 	CPlatformWin::CPlatformWin() {
@@ -16,18 +16,21 @@ namespace App {
 
 	CPlatformWin::~CPlatformWin() {
 	}
+	
+	void CPlatformWin::PreInitialize() {
+		PopulateMonitorList();
+	}
 
 	void CPlatformWin::Initialize() {
 		CPlatform::Initialize();
-		DetectConnectedMonitors();
 	}
 
 	// Method for handling one pass of the application loop.
 	bool CPlatformWin::Update(int& exitCode) {
 		MSG msg;
-		while(PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
+		while(PeekMessageW(&msg, nullptr, 0, 0, PM_REMOVE)) {
 			TranslateMessage(&msg);
-			DispatchMessage(&msg);
+			DispatchMessageW(&msg);
 
 			MessageHandler(msg);
 
@@ -45,7 +48,7 @@ namespace App {
 	//-----------------------------------------------------------------------------------------------
 
 	// Method for refreshing the list of connected monitors and their rects.
-	void CPlatformWin::DetectConnectedMonitors() {
+	void CPlatformWin::PopulateMonitorList() {
 		m_monitorDataList.clear();
 		EnumDisplayMonitors(nullptr, nullptr, MonitorEnumProc, reinterpret_cast<LPARAM>(this));
 	}
@@ -54,7 +57,7 @@ namespace App {
 	void CPlatformWin::MessageHandler(const MSG& msg) {
 		switch(msg.message) {
 			case WM_DISPLAYCHANGE: {
-				DetectConnectedMonitors();
+				PopulateMonitorList();
 			} break;
 			default:
 				break;

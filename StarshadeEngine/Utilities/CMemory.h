@@ -13,6 +13,7 @@
 
 #include "CMemDblStack.h"
 #include <cstdint>
+#include <memory>
 
 namespace Util {
 	class CMemory {

@@ -83,10 +83,7 @@ namespace Math {
 			return x != v.x || y != v.y || z != v.z || w != v.w;
 		}
 
-		//
 		// Specialty methods.
-		//
-
 		static float LengthSq(const Vector4& v) { return v.LengthSq(); }
 		static float Length(const Vector4& v) { return v.Length(); }
 		static void Normalize(Vector4& v) { v.Normalize(); }
@@ -113,10 +110,7 @@ namespace Math {
 			return Vector4(x * lenRec, y * lenRec, z * lenRec, w * lenRec);
 		}
 
-		//
 		// Products.
-		//
-
 		static Vector4 PointwiseProduct(const Vector4& v0, const Vector4& v1) { return v0.PointwiseProduct(v1); }
 		static Vector4 PointwiseQuotient(const Vector4& v0, const Vector4& v1) { return v0.PointwiseQuotient(v1); }
 		static float Dot(const Vector4& v0, const Vector4& v1) { return v0.Dot(v1); }
@@ -133,36 +127,32 @@ namespace Math {
 			return x * v.x + y * v.y + z * v.z + w * v.w;
 		}
 
-		//
 		// Interpolations.
-		//
-
 		static Vector4 Lerp(const Vector4& from, const Vector4& to, float t) { return from.Lerp(to, t); }
-		static Vector4 MoveTowards(const Vector4& from, const Vector4& to, float t) { return from.Lerp(to, t); }
+		static Vector4 MoveTowards(const Vector4& from, const Vector4& to, float t) { return from.MoveTowards(to, t); }
 
 		inline Vector4 Lerp(const Vector4& to, float t) const {
 			return *this + (to - *this) * t;
 		}
 
 		inline Vector4 MoveTowards(const Vector4& to, float t) const {
-			Vector4 pt = to - *this;
-			pt.x = x + Sign(pt.x) * t;
-			pt.y = y + Sign(pt.y) * t;
-			pt.z = z + Sign(pt.z) * t;
-			pt.w = w + Sign(pt.w) * t;
-			return pt;
+			const Vector4 diff = to - *this;
+			if(diff.LengthSq() < 1e-8f) return to;
+			const Vector4 target = *this + diff.Normalized() * t;
+			if(Dot(diff, to - target) <= 0.0f) return to;
+			return target;
 		}
 	};
 
-	const Vector4 VEC3_ZERO(0.0f);
-	const Vector4 VEC3_ONE(1.0f);
+	const Vector4 VEC4_ZERO(0.0f);
+	const Vector4 VEC4_ONE(1.0f);
 
-	const Vector4 VEC3_RIGHT(1.0f, 0.0f, 0.0f, 0.0f);
-	const Vector4 VEC3_LEFT(-1.0f, 0.0f, 0.0f, 0.0f);
-	const Vector4 VEC3_UP(0.0f, 1.0f, 0.0f, 0.0f);
-	const Vector4 VEC3_DOWN(0.0f, -1.0f, 0.0f, 0.0f);
-	const Vector4 VEC3_FORWARD(0.0f, 0.0f, 1.0f, 0.0f);
-	const Vector4 VEC3_BACKWARD(0.0f, 0.0f, -1.0f, 0.0f);
+	const Vector4 VEC4_RIGHT(1.0f, 0.0f, 0.0f, 0.0f);
+	const Vector4 VEC4_LEFT(-1.0f, 0.0f, 0.0f, 0.0f);
+	const Vector4 VEC4_UP(0.0f, 1.0f, 0.0f, 0.0f);
+	const Vector4 VEC4_DOWN(0.0f, -1.0f, 0.0f, 0.0f);
+	const Vector4 VEC4_FORWARD(0.0f, 0.0f, 1.0f, 0.0f);
+	const Vector4 VEC4_BACKWARD(0.0f, 0.0f, -1.0f, 0.0f);
 };
 
 #endif

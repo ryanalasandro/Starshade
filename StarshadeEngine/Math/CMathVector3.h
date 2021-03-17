@@ -85,10 +85,7 @@ namespace Math {
 			return x != v.x || y != v.y || z != v.z;
 		}
 
-		//
 		// Specialty methods.
-		//
-
 		static float LengthSq(const Vector3& v) { return v.LengthSq(); }
 		static float Length(const Vector3& v) { return v.Length(); }
 		static void Normalize(Vector3& v) { v.Normalize(); }
@@ -114,10 +111,7 @@ namespace Math {
 			return Vector3(x * lenRec, y * lenRec, z * lenRec);
 		}
 
-		//
 		// Products.
-		//
-
 		static Vector3 PointwiseProduct(const Vector3& v0, const Vector3& v1) { return v0.PointwiseProduct(v1); }
 		static Vector3 PointwiseQuotient(const Vector3& v0, const Vector3& v1) { return v0.PointwiseQuotient(v1); }
 		static float Dot(const Vector3& v0, const Vector3& v1) { return v0.Dot(v1); }
@@ -143,23 +137,20 @@ namespace Math {
 			);
 		}
 
-		//
 		// Interpolations.
-		//
-
 		static Vector3 Lerp(const Vector3& from, const Vector3& to, float t) { return from.Lerp(to, t); }
-		static Vector3 MoveTowards(const Vector3& from, const Vector3& to, float t) { return from.Lerp(to, t); }
+		static Vector3 MoveTowards(const Vector3& from, const Vector3& to, float t) { return from.MoveTowards(to, t); }
 
 		inline Vector3 Lerp(const Vector3& to, float t) const {
 			return *this + (to - *this) * t;
 		}
 
 		inline Vector3 MoveTowards(const Vector3& to, float t) const {
-			Vector3 pt = to - *this;
-			pt.x = x + Sign(pt.x) * t;
-			pt.y = y + Sign(pt.y) * t;
-			pt.z = z + Sign(pt.z) * t;
-			return pt;
+			const Vector3 diff = to - *this;
+			if(diff.LengthSq() < 1e-8f) return to;
+			const Vector3 target = *this + diff.Normalized() * t;
+			if(Dot(diff, to - target) <= 0.0f) return to;
+			return target;
 		}
 	};
 

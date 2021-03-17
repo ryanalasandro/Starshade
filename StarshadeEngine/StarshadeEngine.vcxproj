@@ -21,10 +21,10 @@
   <ItemGroup>
     <ClCompile Include="Application\CAppBase.cpp" />
     <ClCompile Include="Application\CPanel.cpp" />
-    <ClCompile Include="Application\CPanelWin.cpp" />
     <ClCompile Include="Application\CPlatform.cpp" />
-    <ClCompile Include="Application\CPlatformWin.cpp" />
     <ClCompile Include="Factory\CEngineFactory.cpp" />
+    <ClCompile Include="Graphics\CGraphicsAPI.cpp" />
+    <ClCompile Include="Math\CMathColor.cpp" />
     <ClCompile Include="Resources\CResourceManager.cpp" />
     <ClCompile Include="Utilities\CMemDblStack.cpp" />
     <ClCompile Include="Utilities\CMemory.cpp" />
@@ -32,18 +32,30 @@
   <ItemGroup>
     <ClInclude Include="Application\CAppBase.h" />
     <ClInclude Include="Application\CPanel.h" />
+    <ClInclude Include="Application\CPanelData.h" />
     <ClInclude Include="Application\CPanelWin.h" />
+    <ClInclude Include="Application\CPanelWin.hpp" />
     <ClInclude Include="Application\CPlatform.h" />
     <ClInclude Include="Application\CPlatformData.h" />
     <ClInclude Include="Application\CPlatformWin.h" />
+    <ClInclude Include="Application\CPlatformWin.hpp" />
     <ClInclude Include="Factory\CEngineFactory.h" />
     <ClInclude Include="Globals\CDefines.h" />
     <ClInclude Include="Globals\CGlobals.h" />
+    <ClInclude Include="Graphics\CDX12Graphics.h" />
+    <ClInclude Include="Graphics\CDX12Graphics.hpp" />
+    <ClInclude Include="Graphics\CDX12Util.h" />
+    <ClInclude Include="Graphics\CGraphicsAPI.h" />
+    <ClInclude Include="Graphics\CGraphicsData.h" />
+    <ClInclude Include="Math\CMathColor.h" />
     <ClInclude Include="Math\CMathFloat.h" />
     <ClInclude Include="Math\CMathRect.h" />
     <ClInclude Include="Math\CMathVector2.h" />
     <ClInclude Include="Math\CMathVector3.h" />
     <ClInclude Include="Math\CMathVector4.h" />
+    <ClInclude Include="Math\CMathVectorInt2.h" />
+    <ClInclude Include="Math\CMathVectorInt3.h" />
+    <ClInclude Include="Math\CMathVectorInt4.h" />
     <ClInclude Include="Math\CSIMDMath.h" />
     <ClInclude Include="Math\CSIMDVector.h" />
     <ClInclude Include="Objects\CComponent.h" />
@@ -53,6 +65,7 @@
     <ClInclude Include="Utilities\CEngineError.h" />
     <ClInclude Include="Utilities\CMemDblStack.h" />
     <ClInclude Include="Utilities\CMemory.h" />
+    <ClInclude Include="Utilities\CMemoryFree.h" />
     <ClInclude Include="Utilities\CMemoryUtil.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

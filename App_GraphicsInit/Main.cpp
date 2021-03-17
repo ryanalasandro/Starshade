@@ -2,7 +2,7 @@
 //
 // Copyright (c) Ryan Alasandro
 //
-// Windows Application: Story Box
+// Windows Application: App_GraphicsInit
 //
 // File: Main.cpp
 //

@@ -2,7 +2,7 @@
 //
 // Copyright (c) Ryan Alasandro
 //
-// Windows Application: Story Box
+// Windows Application: App_GraphicsInit
 //
 // File: Application/CApplication.h
 //
@@ -30,7 +30,6 @@ namespace App {
 		void Release() final;
 
 	private:
-		class CPanel* m_pMainPanel;
 	};
 };
 

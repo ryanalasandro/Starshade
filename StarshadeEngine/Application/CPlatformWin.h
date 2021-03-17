@@ -19,14 +19,14 @@ namespace App {
 	public:
 		CPlatformWin();
 		virtual ~CPlatformWin();
-
+		
+	protected:
+		void PreInitialize() final;
 		void Initialize() final;
 		bool Update(int& exitCode) final;
 
-	protected:
 	private:
-		void DetectConnectedMonitors();
-
+		void PopulateMonitorList();
 		void MessageHandler(const MSG& msg);
 		
 		static BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdc, LPRECT rect, LPARAM lParam);
@@ -35,5 +35,7 @@ namespace App {
 	private:
 	};
 };
+
+#include "CPlatformWin.hpp"
 
 #endif

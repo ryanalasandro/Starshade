@@ -2,7 +2,7 @@
 //
 // Copyright (c) Ryan Alasandro
 //
-// Windows Application: Story Box
+// Windows Application: App_GraphicsInit
 //
 // File: Application/CApplication.cpp
 //
@@ -11,13 +11,13 @@
 #include "CApplication.h"
 #include <Application/CPanel.h>
 #include <Application/CPlatform.h>
+#include <Graphics/CGraphicsAPI.h>
 #include <Factory/CEngineFactory.h>
 #include <Utilities/CMemory.h>
 #include <Utilities/CMemoryUtil.h>
 
 namespace App {
-	CApplication::CApplication() :
-		m_pMainPanel(nullptr) {
+	CApplication::CApplication() {
 	}
 
 	CApplication::~CApplication() {
@@ -31,8 +31,10 @@ namespace App {
 	}
 
 	void CApplication::PlatformStage() {
-		m_pMainPanel = Factory::CEngineFactory::Instance().CreatePanel();
-		m_pPlatform->SetMainPanel(m_pMainPanel);
+		Panel()->SetAllowDoubleClick(true);
+		Panel()->SetAllowResize(true);
+		Panel()->SetTargetDimensions(Math::VectorInt2(1280, 720));
+		Panel()->SetTitle(L"App - Graphics Init");
 	}
 
 	void CApplication::GraphicsStage() {
@@ -48,6 +50,5 @@ namespace App {
 	}
 
 	void CApplication::Release() {
-		m_pMainPanel->Release();
 	}
 };
